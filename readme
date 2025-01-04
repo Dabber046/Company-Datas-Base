@@ -1,0 +1,43 @@
+Company Manager CLI
+A Node.js command-line application to manage departments, roles, and employees using PostgreSQL.
+
+Table of Contents
+Description
+Technologies
+Installation
+Usage
+Database Schema
+Contributing
+License
+Description
+This project is a command-line application for managing company departments, roles, and employees. Users can:
+
+View departments, roles, and employees
+Add new departments, roles, and employees
+Update employee roles
+The database is built using PostgreSQL, and the project uses Node.js for the CLI.
+
+Technologies
+Node.js
+PostgreSQL
+pg (PostgreSQL client for Node.js)
+inquirer (for CLI prompts)
+.env (for environment variables)
+Database Schema
+Departments Table: Stores department names.
+
+id: Primary key
+name: Department name (unique, not null)
+Roles Table: Stores job roles and salaries.
+
+id: Primary key
+title: Job title (unique, not null)
+salary: Salary for the role
+department_id: Foreign key to departments
+Employees Table: Stores employee data.
+
+id: Primary key
+first_name: Employee’s first name
+last_name: Employee’s last name
+role_id: Foreign key to roles
+manager_id: Foreign key to another employee (nullable)
